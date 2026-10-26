@@ -1,4 +1,4 @@
-const API_URL = 'http://api.favorit-parts.ru/hs/hsprice/';
+const API_URL = '/api/favorit/';
 const API_KEY = import.meta.env.VITE_API_KEY;
 
 const API_ERRORS = {

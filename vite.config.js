@@ -3,4 +3,13 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  server: {
+    proxy: {
+      '/api/favorit/': {
+        target: 'http://api.favorit-parts.ru',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/favorit\//, '/hs/hsprice/'),
+      },
+    },
+  },
 });
